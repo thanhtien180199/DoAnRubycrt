@@ -1,0 +1,140 @@
+#sanpham_list table tr td {
+    padding: 5px;
+    vertical-align: top;
+}
+ 
+#sanpham_list .list_image {
+    width: 120px;
+    height: 140px;
+}
+ 
+#sanpham_list .list_description {
+    width: 60%;
+}
+ 
+#sanpham_list .list_description dl {
+    margin: 0;
+}
+ 
+#sanpham_list .list_description dt {
+    color: #244;
+    font-weight: bold;
+    font-size: larger;
+}
+ 
+#sanpham_list .list_description dd {
+    margin: 0;
+    font-size: medium;
+}
+ 
+#sanpham_list .list_actions {
+    font-size: x-small;
+    text-align: right;
+    padding-left: 1em;
+}
+ 
+#sanpham_list .list_line_even {
+    background: #e0f8f8;
+}
+ 
+#sanpham_list .list_line_odd {
+   background: #f8b0f8;
+}
+ 
+#tiem .entry {
+    overflow: auto;
+    margin-top: 1em;
+    border-bottom: 1px dotted #77d;
+}
+ 
+#tiem .title {
+    font-size: 120%;
+    font-family: sans-serif;
+}
+ 
+#tiem .entry img {
+    width: 160px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+ 
+ 
+#tiem .entry h3 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: #227;
+}
+ 
+#tiem .entry p {
+    margin-top: 0.5em; 
+    margin-bottom: 0.8em; 
+}
+ 
+#tiem .entry .price_line {
+    clear: both;
+    margin-bottom: 0.5em;
+}
+ 
+#tiem .entry .add_to_cart {
+    position: relative;
+}
+ 
+#tiem .entry .price {
+    color: #44a;
+    font-weight: bold;
+    margin-right: 2em;
+}
+
+#banner {
+    background: #25413c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid;
+    font: small-caps 80px/80px "Arial", serif;
+    color: rgb(210, 228, 223);
+    text-align: center;
+}
+ 
+#banner img {
+    float: left;
+    padding-left: 5px;
+}
+ 
+#columns {
+    background: rgb(1, 1, 20);
+}
+ 
+#main {
+    margin-left: 8em;
+    padding-top: 4ex;
+    padding-left: 2em;
+    background: white;
+}
+ 
+#side {
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 7em;
+    background: rgb(1, 1, 20);
+}
+ 
+#side a {
+    color: white;
+    font-size: medium;
+}
+
+#tiem .giohang_title {
+    font: 120% bold;
+}
+ 
+#tiem .item_price, #tiem .total_line {
+    text-align: right;
+}
+ 
+#tiem .total_line .total_cell {
+    font-weight: bold;
+    border-top: 1px solid #595;
+}

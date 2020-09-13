@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookStore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="tiem">
+  <div class="container-fluid">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+    <div id="banner">
+        <%= @page_title || "BookStore" %>
+    </div>
+    <div class="span12">
+					<div class="account pull-right">
+						<ul class="user-menu">				
+							<li><%= link_to "Trang chu", root_path%></li>
+              <li><%= link_to "Logn_in"%></li>
+              <li><%= link_to "Logn_our"%></li>
+							
+						</ul>
+					</div>
+				</div>
+
+        <div id="main">
+          <%= image_tag('banner1.jpg',style: 'height:25vw;width:96vw;') %>
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <%= image_tag('banner1.jpg',style: 'height:25vw;width:96vw;') %>
+    </li>
+    <li>
+       <%= image_tag('banner2.jpg',style: 'height:25vw;width:96vw;') %>
+    </li>
+    <li>
+       <%= image_tag('banner3.jpg',style: 'height:25vw;width:50vw;') %>
+    </li>
+  </ul>
+</div>
+            <%= yield %>
+        </div>
+    </div> 
+</body>
+</html>

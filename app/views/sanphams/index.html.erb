@@ -1,0 +1,47 @@
+<div id="sanpham_list">
+    <h1>Sản Phẩm</h1>
+  
+    <table>
+    <% @sanphams.each do |sanpham| %>
+        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+  
+            <td>
+                <%= image_tag(sanpham.anh, :class => 'list_image') %>
+                <div class="price_line">
+                      <span class="price"><%= number_to_currency(sanpham.gia, precision: 0, :unit => "vnđ", delimiter: ',', format: "%n%u") %></span>
+            </td>
+
+            <td class="list_description">
+                <dl>
+                    <dt><%= sanpham.tieude%></dt>
+                    <p></p></p>
+                    <dt>Tác giả:  <%= sanpham.tacgia%></dt>
+                    <dt>Thể loại:  <%= sanpham.theloai%></dt>
+                    <dt>Năm sản xuất:  <%= sanpham.namsanxuat%></dt>
+                    <dt>Số lượng còn:  <%= sanpham.soluong%></dt>
+                </dl>
+            </td>
+  
+            <td class="list_description">
+                <dl>
+                    <b>Nội Dung</b>
+                    <dd><%= truncate(strip_tags(sanpham.noidung),
+                            :length => 10000) %></dd>
+                </dl>
+            </td>
+  
+            <td class="list_actions">
+                <%= link_to 'Xem', sanpham %><br/>
+                <%= link_to 'Sửa', edit_sanpham_path(sanpham) %><br/>
+                <%= link_to 'Hủy', sanpham, 
+                    data: { confirm: 'Bạn chắc chứ?' },
+                    :method => :delete %>
+            </td>
+        </tr>
+    <% end %>
+    </table>
+</div>
+
+<br>
+
+<%= link_to 'Sản Phẩm Mới', new_sanpham_path %>

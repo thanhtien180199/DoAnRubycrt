@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tieude: MyString
+  tacgia: MyString
+  theloai: MyString
+  namsanxuat: MyString
+  noidung: MyText
+  anh: MyString
+  soluong: 9.99
+  gia: 9.99
+
+two:
+  tieude: MyString
+  tacgia: MyString
+  theloai: MyString
+  namsanxuat: MyString
+  noidung: MyText
+  anh: MyString
+  soluong: 9.99
+  gia: 9.99

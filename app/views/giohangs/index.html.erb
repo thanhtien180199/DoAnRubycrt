@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mục lục giỏ hàng</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @giohangs.each do |giohang| %>
+      <tr>
+        <td><%= link_to 'Xem', giohang %></td>
+        <td><%= link_to 'Sửa', edit_giohang_path(giohang) %></td>
+        <td><%= link_to 'Hủy', giohang, method: :delete, data: { confirm: 'Bạn chắc chứ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Giỏ hàng mới', new_giohang_path %>

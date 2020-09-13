@@ -1,0 +1,57 @@
+<%= form_with(model: sanpham, local: true) do |form| %>
+  <% if sanpham.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sanpham.errors.count, "error") %> prohibited this sanpham from being saved:</h2>
+
+      <ul>
+      <% sanpham.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tieude %>
+    <%= form.text_field :tieude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tacgia %>
+    <%= form.text_field :tacgia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theloai %>
+    <%= form.text_field :theloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namsanxuat %>
+    <%= form.text_field :namsanxuat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :noidung %>
+    <%= form.text_area :noidung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anh %>
+    <%= form.text_field :anh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :soluong %>
+    <%= form.text_field :soluong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gia %>
+    <%= form.text_field :gia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

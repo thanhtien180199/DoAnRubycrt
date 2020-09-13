@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag(@sanpham.anh, height:'1000', width: '600') %>
+
+<p>
+  <strong>Tên sách</strong>
+  <%= @sanpham.tieude %>
+</p>
+
+<p>
+  <strong>Tác giả</strong>
+  <%= @sanpham.tacgia %>
+</p>
+
+<p>
+  <strong>Thể loại</strong>
+  <%= @sanpham.theloai %>
+</p>
+
+<p>
+  <strong>Năm sản xuất</strong>
+  <%= @sanpham.namsanxuat %>
+</p>
+
+<p>
+  <strong>Nội Dung</strong>
+  <%= @sanpham.noidung %>
+</p>
+
+<p>
+  <strong>Ảnh</strong>
+  <%= @sanpham.anh %>
+</p>
+
+<p>
+  <strong>Số lượng còn</strong>
+  <%= @sanpham.soluong %>
+</p>
+
+<p>
+  <strong>Giá</strong>
+  <%= @sanpham.gia %>
+</p>
+
+<%= link_to 'Edit', edit_sanpham_path(@sanpham) %> |
+<%= link_to 'Back', sanphams_path %>

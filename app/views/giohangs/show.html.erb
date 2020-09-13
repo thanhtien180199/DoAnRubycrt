@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Giỏ hàng của bạn</h2>
+
+<table>
+    <% @giohang.line_items.each do |item| %>
+        <tr>
+            <td><%= item.quantity %> x </td>
+            <td><%= item.sanpham.tieude %></td>
+            <td class="item_price"><%= number_to_currency(item.total_price, precision: 0, :unit => "vnđ", delimiter: ',', format: "%n%u") %></td>
+        </tr>
+    <% end %>
+     
+    <tr class="total_line">
+        <td colspan="2">Tổng</td>
+        <td class="total_cell"><%= number_to_currency(@giohang.total_price, precision: 0, :unit => "vnđ", delimiter: ',', format: "%n%u") %></td>
+    </tr>
+</table>
+
+<%= button_to 'Xóa giỏ hàng', 
+    @cart, 
+    :method => :delete,
+    data: {:confirm => 'Bạn chắc chứ?'} %>
+
+<%= link_to 'Sửa', edit_giohang_path(@giohang) %> |
+<%= link_to 'Quay lại', giohangs_path %>
